@@ -1,4 +1,5 @@
 import InteractiveBackground from './components/InteractiveBackground';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -8,44 +9,73 @@ export default function Home() {
       
       {/* Content layer */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-20">
-        {/* Header with animated gradient text */}
-        <div className="mb-8">
-          <h1 className="text-7xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient">
-            Maxwell Kelly
-          </h1>
-          <div className="h-1 w-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
-        </div>
 
-        {/* Professional title */}
-        <h2 className="text-3xl font-bold text-gray-100 mb-6">
-          Game Developer & Software Engineer
-        </h2>
+        {/* Hero Section - Name + Photo side by side */}
+        <div className="flex flex-col md:flex-row items-center gap-12 mb-12">
+          
+          {/* Left: Text */}
+          <div className="flex-1">
+            <div className="mb-8">
+              <h1 className="text-7xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient">
+                Maxwell Kelly
+              </h1>
+              <div className="h-1 w-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
+            </div>
 
-        {/* Education highlight */}
-        <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-xl p-6 mb-8 backdrop-blur-sm">
-          <div className="flex items-center gap-3 mb-2">
-            <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-            </svg>
-            <h3 className="text-xl font-semibold text-blue-300">Full Sail University</h3>
+            <h2 className="text-3xl font-bold text-gray-100 mb-6">
+              Software Engineer & Game Developer
+            </h2>
+
+            {/* Education highlight */}
+            <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-xl p-6 mb-8 backdrop-blur-sm">
+              <div className="flex items-center gap-3 mb-2">
+                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+                <h3 className="text-xl font-semibold text-blue-300">Full Sail University</h3>
+              </div>
+              <p className="text-gray-300">
+                Bachelor of Science in Computer Science<br />
+                <span className="text-blue-400 font-medium">Concentration: Game Development</span>
+              </p>
+            </div>
           </div>
-          <p className="text-gray-300">
-            Bachelor of Science in Computer Science<br />
-            <span className="text-blue-400 font-medium">Concentration: Game Development</span>
-          </p>
+
+          {/* Right: Headshot */}
+          <div className="flex-shrink-0">
+            <div className="relative">
+              {/* Glow effect behind photo */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl opacity-30 scale-110"></div>
+              
+              {/* Photo */}
+              <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-2xl shadow-blue-500/30">
+                <Image
+                  src="/MaxKellyHeadshot.jpg"
+                  alt="Maxwell Kelly"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+
+              {/* Decorative ring */}
+              <div className="absolute inset-0 rounded-full border-2 border-purple-500/30 scale-110"></div>
+            </div>
+          </div>
         </div>
 
         {/* Main description */}
-       <div className="space-y-4 mb-10 text-lg">
+        <div className="space-y-4 mb-10 text-lg">
           <p className="text-gray-300 leading-relaxed">
-            Soon-to-be graduate with a B.S. in Computer Science, concentration in Game Development. I specialize in 
-            real-time systems, networking, and performance-focused software engineering.
+            Computer Science graduate from Full Sail University with a concentration in Game Development. 
+            I specialize in real-time systems, distributed architecture, and performance-critical applications 
+            across backend engineering and interactive experiences.
           </p>
-         <p className="text-gray-400 leading-relaxed">
-            With a strong C++ foundation, I’ve built multithreaded TCP servers, AI-powered voice systems, and 
-           gameplay architectures emphasizing state management, concurrency, and low-latency execution. 
-            I approach engineering with a systems-level mindset focused on reliability and scalability.
+          <p className="text-gray-400 leading-relaxed">
+            From multithreaded TCP servers and AI-powered voice systems to rendering pipelines and 
+            distributed game architecture, I focus on clean code, modularity, and systems that scale 
+            under real-world conditions.
           </p>
         </div>
 
@@ -94,6 +124,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+
       </div>
     </main>
   );

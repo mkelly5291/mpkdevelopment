@@ -222,7 +222,7 @@ export default function Projects() {
                 </div>
                 <h3 className="text-2xl font-bold text-purple-400 mb-2">Play Maze Shift</h3>
                 <p className="text-gray-300 mb-6">
-                  Experience the full game on Newgrounds
+                  Experience the full game on Newgrounds with optimized performance and cross-platform compatibility
                 </p>
               </div>
 
