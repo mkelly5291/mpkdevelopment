@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import GameOfLifeBackground from '../components/GameOfLifeBackground';
 
 export default function Contact() {
@@ -5,9 +6,22 @@ export default function Contact() {
     <main className="min-h-screen bg-black text-white overflow-hidden">
       {/* Game of Life background */}
       <GameOfLifeBackground />
+      {/* Back to Home */}
+
+      
 
       {/* Content layer */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-20" style={{ pointerEvents: 'auto' }}>
+        {/* Back to Home */}
+<Link
+  href="/"
+  className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition mb-12 group"
+>
+  <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+  </svg>
+  Back to Home
+</Link>
         <div className="mb-12">
           <h1 className="text-6xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient">
             Get in Touch

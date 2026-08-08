@@ -19,6 +19,16 @@ export default function Projects() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        {/* Back to Home */}
+<Link
+  href="/"
+  className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition mb-12 group"
+>
+  <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+  </svg>
+  Back to Home
+</Link>
         {/* Header */}
         <div className="text-center mb-20">
           <p className="text-blue-400 font-mono text-sm tracking-widest uppercase mb-4">
@@ -30,7 +40,7 @@ export default function Projects() {
             </span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Explore my work across two disciplines — systems engineering and interactive experiences.
+            Explore my work across two disciplines, systems engineering and interactive experiences.
             Each built from scratch with a focus on performance and clean architecture.
           </p>
         </div>

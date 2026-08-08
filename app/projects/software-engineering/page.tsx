@@ -24,7 +24,7 @@ export default function SoftwareEngineering() {
           <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Back to Portfolio
+          Back to My Work
         </Link>
 
         {/* Header */}
@@ -41,7 +41,7 @@ export default function SoftwareEngineering() {
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl leading-relaxed">
             Focused on building reliable, scalable systems with clean architecture. 
-            From low-level network programming to AI-powered voice pipelines — 
+            From low-level network programming to AI-powered voice pipelines 
             I approach every problem with a systems-level mindset.
           </p>
         </div>

@@ -97,7 +97,7 @@ export default function Home() {
             href="/projects" 
             className="group relative bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-500/50"
           >
-            <span className="relative z-10">View Projects</span>
+            <span className="relative z-10">My Work</span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </a>
           <a 
