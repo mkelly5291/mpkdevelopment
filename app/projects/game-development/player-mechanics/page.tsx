@@ -259,12 +259,12 @@ export default function PlayerMechanics() {
 
             <p className="text-gray-300 leading-relaxed mb-6">
              The input system was implemented in C++ using Unreal Engine's UInputComponent, 
-  binding axis inputs for movement and rotation as well as an action input for 
-  attacking. The Blueprint screenshot shows the same input functionality as it 
-  would appear using Unreal's built-in visual scripting system — demonstrating 
-  an understanding of both approaches and how the same logic translates between 
-  code and Blueprints. Movement uses controller rotation yaw to drive directional 
-  input so the character always moves relative to where the camera is facing.
+              binding axis inputs for movement and rotation as well as an action input for 
+              attacking. The Blueprint screenshot shows the same input functionality as it 
+              would appear using Unreal's built-in visual scripting system — demonstrating 
+              an understanding of both approaches and how the same logic translates between 
+              code and Blueprints. Movement uses controller rotation yaw to drive directional 
+              input so the character always moves relative to where the camera is facing.
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mb-6">

@@ -23,7 +23,7 @@ export default function Home() {
             </div>
 
             <h2 className="text-3xl font-bold text-gray-100 mb-6">
-              Software Engineer & Game Developer
+              Software Engineer, Web Developer & Game Developer
             </h2>
 
             {/* Education highlight */}
@@ -88,6 +88,44 @@ export default function Home() {
                 {tech}
               </span>
             ))}
+          </div>
+        </div>
+
+        {/* Web Development Services */}
+        <div className="relative mb-12 rounded-2xl overflow-hidden border border-blue-500/30 bg-gradient-to-br from-blue-950/60 via-gray-900/60 to-black/60 backdrop-blur-sm p-8">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-bl-full"></div>
+          <div className="relative flex flex-col md:flex-row md:items-center gap-8">
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-2 mb-4">
+                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                <span className="text-blue-400 text-sm font-mono">Now Accepting Clients</span>
+              </div>
+              <h3 className="text-3xl font-bold mb-3">
+                Web Development <span className="text-blue-400">Services</span>
+              </h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Need a website? I build modern, professional, and mobile-friendly websites for
+                businesses, startups, and personal brands.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['Fast Loading', 'Mobile Friendly', 'SEO Optimized', 'Secure & Reliable'].map((item) => (
+                  <span key={item} className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-blue-300">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="flex-shrink-0">
+              <a
+                href="/web-development"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-500/50 group"
+              >
+                View Services & Pricing
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
