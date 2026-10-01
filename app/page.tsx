@@ -69,13 +69,18 @@ export default function Home() {
         <div className="space-y-4 mb-10 text-lg">
           <p className="text-gray-300 leading-relaxed">
             Computer Science graduate from Full Sail University with a concentration in Game Development. 
-            I specialize in real-time systems, distributed architecture, and performance-critical applications 
-            across backend engineering and interactive experiences.
+            I specialize in real-time systems, distributed architecture, and performance-critical applications
+            across backend engineering, web development, and interactive experiences.
           </p>
           <p className="text-gray-400 leading-relaxed">
-            From multithreaded TCP servers and AI-powered voice systems to rendering pipelines and 
-            distributed game architecture, I focus on clean code, modularity, and systems that scale 
+            From multithreaded TCP servers and AI-powered voice systems to rendering pipelines and
+            distributed game architecture, I focus on clean code, modularity, and systems that scale
             under real-world conditions.
+          </p>
+          <p className="text-gray-400 leading-relaxed">
+            I also design and build modern, fast, and mobile-friendly websites for businesses, startups,
+            and personal brands, from simple informational sites to full e-commerce and custom web
+            applications, with a focus on clean design, SEO, and long-term reliability.
           </p>
         </div>
 
