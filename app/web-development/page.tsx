@@ -1,4 +1,60 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+const pageUrl = 'https://mpkdevelopment.com/web-development';
+const pageTitle = 'Web Design & Development in Poinciana & Kissimmee, FL | MPK Development';
+const pageDescription =
+  'Affordable custom web design and development for small businesses in Poinciana, Kissimmee, and Central Florida. Mobile-friendly websites, e-commerce, online ordering, SEO, and website redesigns starting at $750.';
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: [
+    'web design Poinciana',
+    'web design Kissimmee',
+    'web developer Kissimmee FL',
+    'web developer Poinciana FL',
+    'website design Central Florida',
+    'small business website design',
+    'affordable web design Florida',
+    'custom website development',
+    'e-commerce website design',
+    'online ordering website',
+    'website redesign',
+    'local SEO Kissimmee',
+    'Osceola County web design',
+    'Orlando area web developer',
+  ],
+  alternates: { canonical: pageUrl },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    siteName: 'MPK Development',
+    locale: 'en_US',
+    type: 'website',
+  },
+};
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'MPK Development – Web Design & Development',
+  description: pageDescription,
+  url: pageUrl,
+  telephone: '+1-717-712-4612',
+  email: 'mkelly5291@gmail.com',
+  priceRange: '$750+',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Poinciana',
+    addressRegion: 'FL',
+    postalCode: '34759',
+    addressCountry: 'US',
+  },
+  founder: { '@type': 'Person', name: 'Maxwell Kelly' },
+  serviceType: ['Web Design', 'Web Development', 'E-Commerce Websites', 'Website Redesign', 'Search Engine Optimization'],
+};
 
 const features = [
   { label: 'Fast Loading', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
@@ -63,6 +119,12 @@ const packages = [
 export default function WebDevelopment() {
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Local business structured data for Google */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Background grid */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0" style={{
@@ -90,15 +152,22 @@ export default function WebDevelopment() {
           <p className="text-blue-400 font-mono text-sm tracking-widest uppercase mb-4">
             {'</> Modern • Fast • Responsive'}
           </p>
-          <h1 className="text-5xl md:text-7xl font-black mb-6">
-            Need a{' '}
+          <h1 className="text-5xl md:text-7xl font-black mb-4">
+            Web Design &amp;{' '}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
-              Website?
+              Development
             </span>
           </h1>
+          <p className="text-lg md:text-xl font-semibold text-gray-300 mb-8">
+            Located in Poinciana / Kissimmee, Central Florida
+          </p>
+          <p className="text-3xl md:text-4xl font-black mb-4">
+            Need a <span className="text-blue-400">Website?</span>
+          </p>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
-            I build modern, professional, and mobile-friendly websites for businesses,
-            startups, and personal brands.
+            I build modern, professional, and mobile-friendly websites for small businesses,
+            startups, and personal brands. Based in the Poinciana / Kissimmee area of Central Florida,
+            with remote work available anywhere.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
@@ -118,7 +187,7 @@ export default function WebDevelopment() {
           <h2 className="text-4xl font-black mb-2">
             My <span className="text-blue-400">Services</span>
           </h2>
-          <p className="text-gray-400 mb-8">Everything you need to get online and grow.</p>
+          <p className="text-gray-400 mb-8">Everything your business needs to get online and grow.</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s) => (
               <div key={s.title} className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all hover:shadow-xl hover:shadow-blue-900/20">
@@ -219,7 +288,8 @@ export default function WebDevelopment() {
             <div className="space-y-5">
               <div>
                 <p className="text-xs font-bold uppercase tracking-wide text-gray-400">Location</p>
-                <p className="text-gray-200">Poinciana, FL 34759</p>
+                <p className="text-gray-200">Poinciana / Kissimmee, FL 34759</p>
+                <p className="text-gray-400 text-sm">Central Florida</p>
                 <p className="text-gray-500 text-sm italic">Remote work available</p>
               </div>
               <div>
