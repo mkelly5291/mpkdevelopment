@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const pageUrl = 'https://mpkdevelopment.com/web-development';
+const pageUrl = 'https://www.mpkdevelopment.com/web-development';
 const pageTitle = 'Web Design & Development in Poinciana & Kissimmee, FL | MPK Development';
 const pageDescription =
   'Affordable custom web design and development for small businesses in Poinciana, Kissimmee, and Central Florida. Mobile-friendly websites, e-commerce, online ordering, SEO, and website redesigns starting at $750.';
