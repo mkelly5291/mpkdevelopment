@@ -38,3 +38,28 @@ body {
   background-size: 200% 200%;
   animation: gradient 3s ease infinite;
 }
+
+/* Web Development page animations */
+@keyframes wd-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes wd-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes wd-glow {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.65; }
+}
+
+.wd-float { animation: wd-float 6s ease-in-out infinite; }
+.wd-float-delay { animation: wd-float 7s ease-in-out 1.5s infinite; }
+.wd-marquee { animation: wd-marquee 40s linear infinite; }
+.wd-glow { animation: wd-glow 8s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wd-float, .wd-float-delay, .wd-marquee, .wd-glow { animation: none; }
+}
