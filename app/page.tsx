@@ -1,9 +1,41 @@
+import type { Metadata } from 'next';
 import InteractiveBackground from './components/InteractiveBackground';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+  openGraph: { url: '/' },
+};
+
+// Tells Google the site's name ("MPK Development") and who it belongs to
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      name: 'MPK Development',
+      alternateName: ['MPKDevelopment', 'mpkdevelopment.com'],
+      url: 'https://www.mpkdevelopment.com/',
+    },
+    {
+      '@type': 'Person',
+      name: 'Maxwell Kelly',
+      url: 'https://www.mpkdevelopment.com/',
+      jobTitle: 'Software Engineer, Web Developer & Game Developer',
+      alumniOf: { '@type': 'CollegeOrUniversity', name: 'Full Sail University' },
+      address: { '@type': 'PostalAddress', addressLocality: 'Poinciana', addressRegion: 'FL', addressCountry: 'US' },
+    },
+  ],
+};
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Interactive particle background */}
       <InteractiveBackground />
       

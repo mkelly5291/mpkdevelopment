@@ -10,7 +10,7 @@ const pageDescription =
   'Affordable custom web design and development for small businesses in Poinciana, Kissimmee, and Central Florida. Mobile-friendly websites, e-commerce, online ordering, SEO, and website redesigns starting at $750.';
 
 export const metadata: Metadata = {
-  title: pageTitle,
+  title: { absolute: pageTitle },
   description: pageDescription,
   keywords: [
     'web design Poinciana',
