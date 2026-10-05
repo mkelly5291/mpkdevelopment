@@ -36,8 +36,9 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Please tell me a little about what you are looking for.' }, { status: 400 });
   }
 
-  const user = process.env.GMAIL_USER;
-  const pass = process.env.GMAIL_APP_PASSWORD;
+  // Trim/strip whitespace so copy-pasted values (e.g. "abcd efgh ijkl mnop") still work
+  const user = process.env.GMAIL_USER?.trim();
+  const pass = process.env.GMAIL_APP_PASSWORD?.replace(/\s+/g, '');
   if (!user || !pass) {
     console.error('web-inquiry: GMAIL_USER or GMAIL_APP_PASSWORD is not set');
     return Response.json({ error: 'The form is not set up yet. Please call or email instead.' }, { status: 500 });
